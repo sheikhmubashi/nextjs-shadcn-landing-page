@@ -46,7 +46,7 @@ const routeList: RouteProps[] = [
 export const Navbar = () => {
  const [isOpen, setIsOpen] = useState<boolean>(false);
  return (
-  <header className="sticky  border-b-[1px] top-0 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">
+  <header className="fixed  border-b-[1px] top-0 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">
    <NavigationMenu className="mx-auto">
     <NavigationMenuList className="max-w-[1400px] mx-auto px-4 h-14  w-screen flex justify-between ">
      <NavigationMenuItem className="font-bold flex">
