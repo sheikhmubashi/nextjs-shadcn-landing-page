@@ -15,10 +15,10 @@ import { GitHubLogoIcon } from "@radix-ui/react-icons";
 
 export const HeroCards = () => {
  return (
-  <div className="hidden xl:flex flex-row flex-wrap gap-6 relative w-[700px] h-[500px]">
+  <div className="hidden xl:flex flex-row flex-wrap xl:-gap-6 gap-6 2xl:gap-6 relative w-[700px] h-[500px] mr-10 2xl:mr-0">
    {/* Testimonial */}
    <Card className="absolute w-[340px] -top-[15px] drop-shadow-xl shadow-black/10 dark:shadow-white/10">
-    <CardHeader className="flex flex-row items-center gap-4 mt-1 pb-2">
+    <CardHeader className="flex flex-row items-center xl:gap-1 gap-4 2xl:gap-4 mt-1 pb-2">
      <Avatar>
       <AvatarImage alt="" src="https://github.com/shadcn.png" />
       <AvatarFallback>SH</AvatarFallback>
@@ -34,7 +34,7 @@ export const HeroCards = () => {
    </Card>
 
    {/* Team */}
-   <Card className="absolute right-[20px] top-4 w-80 flex flex-col justify-center items-center drop-shadow-xl shadow-black/10 dark:shadow-white/10">
+   <Card className="absolute xl:right-6 right-5 2xl:right-[20px] top-4 w-80 flex flex-col justify-center items-center drop-shadow-xl shadow-black/10 dark:shadow-white/10">
     <CardHeader className="mt-8 flex justify-center items-center pb-2">
      <img
       src="https://i.pravatar.cc/150?img=58"
@@ -106,7 +106,7 @@ export const HeroCards = () => {
    </Card>
 
    {/* Pricing */}
-   <Card className="absolute top-[150px] left-[50px] w-72  drop-shadow-xl shadow-black/10 dark:shadow-white/10">
+   <Card className="absolute top-[150px] xl:left-12 2xl:left-[50px] w-72  drop-shadow-xl shadow-black/10 dark:shadow-white/10">
     <CardHeader>
      <CardTitle className="flex item-center justify-between">
       Free
@@ -145,7 +145,7 @@ export const HeroCards = () => {
    </Card>
 
    {/* Service */}
-   <Card className="absolute w-[350px] -right-[10px] bottom-[35px]  drop-shadow-xl shadow-black/10 dark:shadow-white/10">
+   <Card className="absolute xl:w-[320px] 2xl:w-[350px] right-6 2xl:-right-[10px] bottom-[35px]  drop-shadow-xl shadow-black/10 dark:shadow-white/10">
     <CardHeader className="space-y-1 flex md:flex-row justify-start items-start gap-4">
      <div className="bg-primary/20 p-1 rounded-2xl">
       <LightBulbIcon />

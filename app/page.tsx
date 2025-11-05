@@ -16,7 +16,7 @@ import { Testimonials } from "@/components/Testimonials";
 
 function App() {
  return (
-  <>
+  <main className="w-full h-full overflow-hidden">
    <Navbar />
    <Hero />
    <Sponsors />
@@ -32,7 +32,7 @@ function App() {
    <FAQ />
    <Footer />
    <ScrollToTop />
-  </>
+  </main>
  );
 }
 
