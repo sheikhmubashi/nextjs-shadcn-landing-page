@@ -1,0 +1,184 @@
+/* ===============================
+ ✅ Tailwind CSS v4 (Next.js ready)
+=============================== */
+@import "tailwindcss";
+
+/* ===============================
+ ✅ Custom Variant for Dark Mode
+=============================== */
+@custom-variant dark (&:is(.dark *));
+
+/* ===============================
+ ✅ Theme Tokens (Green Theme)
+=============================== */
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+}
+
+/* ===============================
+ ✅ Light / Dark Theme Colors
+=============================== */
+/* ===============================
+ ✅ Light / Dark Theme Colors (Fixed Background)
+=============================== */
+:root {
+  --background: oklch(99.5% 0.002 250); /* pure white, soft neutral tone */
+  --foreground: oklch(25% 0.02 265);
+
+  --card: oklch(100% 0 0);
+  --card-foreground: oklch(25% 0.02 265);
+  --popover: oklch(100% 0 0);
+  --popover-foreground: oklch(25% 0.02 265);
+
+  /* ✅ Primary green */
+  --primary: oklch(67% 0.18 150);
+  --primary-foreground: oklch(98% 0.01 150);
+
+  /* ✅ Secondary + Neutral */
+  --secondary: oklch(95% 0.01 250);
+  --secondary-foreground: oklch(30% 0.03 260);
+
+  /* ✅ Muted / Accent */
+  --muted: oklch(96% 0.008 250);
+  --muted-foreground: oklch(55% 0.03 250);
+  --accent: oklch(96% 0.008 250);
+  --accent-foreground: oklch(30% 0.03 260);
+
+  /* ✅ Destructive */
+  --destructive: oklch(62% 0.25 25);
+  --destructive-foreground: oklch(99% 0 0);
+
+  /* ✅ Borders / Inputs */
+  --border: oklch(90% 0.01 250);
+  --input: oklch(90% 0.01 250);
+
+  /* ✅ Ring + Radius */
+  --ring: oklch(67% 0.18 150);
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: #0c0a09; /* lifted from Tailwind green dark tone */
+  --foreground: oklch(97% 0.003 250);
+
+  --card: #1c1917;
+  --card-foreground: oklch(97% 0.003 250);
+  --popover: oklch(18% 0.012 250);
+  --popover-foreground: oklch(97% 0.003 250);
+
+  --primary: oklch(63% 0.17 150);
+  --primary-foreground: oklch(20% 0.02 150);
+
+  --secondary: oklch(27% 0.015 250);
+  --secondary-foreground: oklch(98% 0 0);
+
+  --muted: oklch(23% 0.02 250);
+  --muted-foreground: oklch(60% 0.03 250);
+  --accent: oklch(25% 0.02 250);
+  --accent-foreground: oklch(97% 0.002 0);
+
+  --destructive: oklch(37% 0.14 25);
+  --destructive-foreground: oklch(98% 0.003 0);
+
+  --border: oklch(28% 0.015 250);
+  --input: oklch(28% 0.015 250);
+  --ring: oklch(57% 0.15 150);
+}
+
+/* ===============================
+ ✅ Base Layer (Tailwind Defaults)
+=============================== */
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* HeroCards background shadow */
+.shadow {
+  position: absolute;
+  background: oklch(67% 0.18 150 / 0%); /* same as your primary but transparent */
+  border-radius: 24px;
+  rotate: 35deg;
+  z-index: -1;
+  width: 260px;
+  top: 200px;
+  right: 160px;
+  height: 400px;
+  filter: blur(150px);
+  will-change: transform, background, right;
+  animation: shadow-slide 4s linear infinite alternate;
+}
+
+@keyframes shadow-slide {
+  from {
+    background: oklch(67% 0.18 150 / 20%);
+    right: 460px;
+  }
+  to {
+    background: oklch(67% 0.18 150 / 80%);
+    right: 160px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .shadow {
+    top: 70px;
+  }
+
+  @keyframes shadow-slide {
+    from {
+      background: oklch(67% 0.18 150 / 20%);
+      right: 460px;
+    }
+    to {
+      background: oklch(67% 0.18 150 / 50%);
+      right: 160px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .shadow {
+    top: 70px;
+    width: 100px;
+    height: 350px;
+    filter: blur(60px);
+  }
+
+  @keyframes shadow-slide {
+    from {
+      background: oklch(67% 0.18 150 / 20%);
+      right: 280px;
+    }
+    to {
+      background: oklch(67% 0.18 150 / 30%);
+      right: 100px;
+    }
+  }
+}
