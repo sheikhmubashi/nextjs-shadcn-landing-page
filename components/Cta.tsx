@@ -2,7 +2,7 @@ import { Button } from "./ui/button";
 
 export const Cta = () => {
  return (
-  <section id="cta" className="bg-card py-16 my-24 sm:my-32">
+  <section id="cta" className="bg-muted py-16 my-24 sm:my-32">
    <div className="max-w-[1400px] mx-auto px-4 md:px-6 lg:grid lg:grid-cols-2 place-items-center">
     <div className="lg:col-start-1">
      <h2 className="text-3xl md:text-4xl font-bold ">
