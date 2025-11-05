@@ -46,7 +46,10 @@ const FAQList: FAQProps[] = [
 
 export const FAQ = () => {
  return (
-  <section id="faq" className="container mx-auto px-4 md:px-16 py-24 sm:py-32">
+  <section
+   id="faq"
+   className="max-w-[1400px] mx-auto px-4 md:px-6 py-24 sm:py-32"
+  >
    <h2 className="text-3xl md:text-4xl font-bold mb-4">
     Frequently Asked{" "}
     <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">

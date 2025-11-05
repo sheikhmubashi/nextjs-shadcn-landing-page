@@ -110,7 +110,10 @@ export const Team = () => {
  };
 
  return (
-  <section id="team" className="container mx-auto px-4 md:px-16 py-24 sm:py-32">
+  <section
+   id="team"
+   className="max-w-[1400px] mx-auto px-4 md:px-6 py-24 sm:py-32"
+  >
    <h2 className="text-3xl md:text-4xl font-bold">
     <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
      Our Dedicated{" "}
@@ -127,7 +130,7 @@ export const Team = () => {
     {teamList.map(({ imageUrl, name, position, socialNetworks }: TeamProps) => (
      <Card
       key={name}
-      className="bg-muted/50 relative mt-8 flex flex-col justify-center items-center"
+      className="bg-muted relative mt-8 flex flex-col justify-center items-center"
      >
       <CardHeader className="mt-8 flex justify-center items-center pb-2">
        <img

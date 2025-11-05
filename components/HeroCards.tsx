@@ -15,10 +15,10 @@ import { GitHubLogoIcon } from "@radix-ui/react-icons";
 
 export const HeroCards = () => {
  return (
-  <div className="hidden 2xl:flex flex-row flex-wrap gap-8 relative w-[700px] h-[500px]">
+  <div className="hidden xl:flex flex-row flex-wrap gap-6 relative w-[700px] h-[500px]">
    {/* Testimonial */}
    <Card className="absolute w-[340px] -top-[15px] drop-shadow-xl shadow-black/10 dark:shadow-white/10">
-    <CardHeader className="flex flex-row items-center gap-4 pb-2">
+    <CardHeader className="flex flex-row items-center gap-4 mt-1 pb-2">
      <Avatar>
       <AvatarImage alt="" src="https://github.com/shadcn.png" />
       <AvatarFallback>SH</AvatarFallback>
@@ -147,7 +147,7 @@ export const HeroCards = () => {
    {/* Service */}
    <Card className="absolute w-[350px] -right-[10px] bottom-[35px]  drop-shadow-xl shadow-black/10 dark:shadow-white/10">
     <CardHeader className="space-y-1 flex md:flex-row justify-start items-start gap-4">
-     <div className="mt-1 bg-primary/20 p-1 rounded-2xl">
+     <div className="bg-primary/20 p-1 rounded-2xl">
       <LightBulbIcon />
      </div>
      <div>

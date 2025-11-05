@@ -5,8 +5,8 @@ import { GitHubLogoIcon } from "@radix-ui/react-icons";
 
 export const Hero = () => {
  return (
-  <section className="container mx-auto px-4 md:px-16 grid w-full 2xl:grid-cols-2 place-items-center py-20 md:py-32 gap-10">
-   <div className="text-center 2xl:text-start space-y-6">
+  <section className="max-w-[1400px] mx-auto px-4 md:px-6 grid w-full xl:grid-cols-2 place-items-center py-20 md:py-32 gap-10">
+   <div className="text-center xl:text-start space-y-6">
     <main className="text-5xl md:text-6xl font-bold">
      <h1 className="inline">
       <span className="inline bg-gradient-to-r from-[#F596D3]  to-[#D247BF] text-transparent bg-clip-text">

@@ -4,9 +4,9 @@ export const About = () => {
  return (
   <section
    id="about"
-   className="container mx-auto px-4 md:px-16 py-24 sm:py-32"
+   className="max-w-[1400px] mx-auto px-4 md:px-6 py-24 sm:py-32"
   >
-   <div className="bg-card border rounded-lg py-12">
+   <div className="bg-muted border rounded-lg py-12">
     <div className="px-6 flex flex-col-reverse md:flex-row gap-8 md:gap-12">
      <img
       src={"/assets/pilot.png"}
