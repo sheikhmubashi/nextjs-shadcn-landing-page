@@ -16,7 +16,7 @@ import { Testimonials } from "@/components/Testimonials";
 
 function App() {
  return (
-  <main className="w-full h-full overflow-hidden">
+  <main className="w-full h-full">
    <Navbar />
    <Hero />
    <Sponsors />
