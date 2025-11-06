@@ -13,14 +13,14 @@ export const Newsletter = () => {
   <section id="newsletter">
    <hr className="w-11/12 mx-auto" />
 
-   <div className="max-w-[1400px] mx-auto px-4 py-24 sm:py-32">
+   <div className="max-w-[1400px] mx-auto px-6 md:px-4 py-24 sm:py-32">
     <h3 className="text-center text-4xl md:text-5xl font-bold">
      Join Our Daily{" "}
      <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
       Newsletter
      </span>
     </h3>
-    <p className="text-xl text-muted-foreground text-center mt-4 mb-8">
+    <p className="text-xl text-muted-foreground text-center mt-4 md:px-0 px-4 mb-8">
      Lorem ipsum dolor sit amet consectetur.
     </p>
 
